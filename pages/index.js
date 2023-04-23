@@ -18,15 +18,16 @@ data.results.forEach((item,index)=>{
 
   return{
     props:{pokemonList:data.results}
-  } 
+  }
 }
 
 export default function Home({pokemonList}) {
+  console.log(pokemonList)
   return (
     <>
-    <div className={styles.title_conainer}>
+    <div className={styles.title_container}>
+    <Image src='/images/pokeball.png' width='50'  height='50' alt='pokeball' />
       <h1 className={styles.title} >Poke<span className={styles.title_span}>Lib</span></h1>
-      <Image src='/images/pokeball.png' width='50'  height='50' alt='pokeball' />
     </div>
     <div className={styles.pokemon_container}>
       

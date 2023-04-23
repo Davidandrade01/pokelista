@@ -23,12 +23,14 @@ align-items: center;
 .link_items{
     display: flex;
     list-style: none;
+    color: #fff;
    
     
 
 }
 .link_items li{
     margin-right: 1.3em;
+    color: #fff;
     
 }
 

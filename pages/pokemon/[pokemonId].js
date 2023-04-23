@@ -1,5 +1,6 @@
 import Image from "next/image"
 import styles from '../../styles/Pokemon.module.css'
+import { useRouter } from "next/router"
 
 const api="https://pokeapi.co/api/v2/pokemon/"
 
@@ -30,10 +31,18 @@ export async function getStaticPaths(){
   
    
 })
-return{ paths,fallback:false}
+return{ paths,fallback:true}
 }
 
 export default function Pokedetail({pokemon}){
+// inicialmente será feita uma checagem se o fallback está true. A ideia é ele permitir
+// um carregamento de resultados não pré-renderizados. Ou seja além dos 200 id´s definidos
+  const router=useRouter()   
+  if(router.isFallback){    
+    return <h3>loading...</h3>
+  }
+
+
     return(
         <div className={styles.pokemon_container}>
             <h1 className={styles.pokemon_title}>{pokemon.name} </h1>

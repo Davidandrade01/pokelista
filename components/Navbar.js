@@ -18,12 +18,12 @@ export default function Navbar() {
       </div>
       <ul className={styles.link_items}>
         <li>
-          <Link href="/">
+          <Link href="/" style={{color:"white" ,textDecoration: 'none'}}>
             Home
           </Link>
         </li>
         <li>
-          <Link href="/About">
+          <Link href="/About"  style={{color:"white" ,textDecoration: 'none'}}>
             About
           </Link>
         </li>
