@@ -1,5 +1,5 @@
 import Image from "next/image"
-import styles from '../../styles/Pokemon.module.css'
+import styles from '../../styles/pokemon.module.css'
 import { useRouter } from "next/router"
 
 const api="https://pokeapi.co/api/v2/pokemon/"
