@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 const api="https://pokeapi.co/api/v2/pokemon/"
 
 
-export async function getStaticProps(context){
+export async function getStaticProps(context){  
     
     const {params}=context
     const data= await fetch (`${api}${params.pokemonId}`)
